@@ -1,0 +1,68 @@
+/* ── Design tokens ── */
+:root {
+  --bg: #f5f5f4;
+  --surface: #ffffff;
+  --border: #e2e2e0;
+  --border-focus: #a8a8a6;
+
+  --text-primary: #1a1a18;
+  --text-secondary: #6b6b68;
+  --text-muted: #9e9e9b;
+
+  --user-bg: #1a1a18;
+  --user-text: #ffffff;
+
+  --bot-bg: #ffffff;
+  --bot-text: #1a1a18;
+
+  --accent: #3b5bdb;
+  --accent-hover: #2f4ec4;
+
+  --error-bg: #fff5f5;
+  --error-border: #fca5a5;
+  --error-text: #b91c1c;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}

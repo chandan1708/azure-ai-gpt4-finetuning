@@ -1,0 +1,239 @@
+/* ── Setup page ── */
+.setup-wrapper {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+    background: var(--bg);
+}
+
+.setup-card {
+    width: 100%;
+    max-width: 480px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 36px 32px;
+}
+
+/* ── Logo ── */
+.setup-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo-ring {
+    width: 52px;
+    height: 52px;
+    background: var(--user-bg);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* ── Header ── */
+.setup-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.setup-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.setup-subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* ── Badges ── */
+.setup-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 28px;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 4px 11px;
+}
+
+.badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+
+.badge-dot.g {
+    background: #16a34a;
+}
+
+.badge-dot.b {
+    background: #2563eb;
+}
+
+.badge-dot.p {
+    background: #7c3aed;
+}
+
+/* ── Form ── */
+.setup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.input-group {
+    position: relative;
+}
+
+.api-key-input {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 9px 12px;
+    font-size: 14px;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.api-key-input::placeholder {
+    color: var(--text-muted);
+}
+
+.api-key-input:focus {
+    border-color: var(--border-focus);
+    background: white;
+}
+
+.input-group .api-key-input {
+    padding-right: 44px;
+}
+
+.toggle-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    transition: color 0.15s;
+}
+
+.toggle-btn:hover {
+    color: var(--text-secondary);
+}
+
+.system-prompt-textarea {
+    resize: vertical;
+    min-height: 80px;
+    line-height: 1.5;
+}
+
+/* ── Error ── */
+.setup-error {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--error-bg);
+    border: 1px solid var(--error-border);
+    border-radius: var(--radius-sm);
+    color: var(--error-text);
+    font-size: 13.5px;
+    padding: 10px 12px;
+}
+
+/* ── Connect button ── */
+.connect-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: var(--user-bg);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 11px 20px;
+    font-size: 14.5px;
+    font-weight: 500;
+    transition: background 0.15s, opacity 0.15s;
+    margin-top: 4px;
+}
+
+.connect-btn:hover:not(:disabled) {
+    background: #333330;
+}
+
+.connect-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.spinner {
+    width: 15px;
+    height: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ── Note ── */
+.setup-note {
+    text-align: center;
+    font-size: 12.5px;
+    color: var(--text-muted);
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+/* hide the old setup-grid background */
+.setup-grid {
+    display: none;
+}
